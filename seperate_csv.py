@@ -14,7 +14,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 # Open the input CSV file
-with codecs.open('zetin_history.csv', 'r', encoding='utf-8') as input_file:
+with codecs.open('zetin_history.csv', 'r', encoding='utf-8-sig') as input_file:
     reader = csv.reader(input_file)
     output_file = None
     output_file_name = None
