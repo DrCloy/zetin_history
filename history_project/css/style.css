@@ -1,0 +1,54 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 80%;
+
+}
+
+li {
+    display: table-cell;
+    border-collapse: collapse;
+    padding: 10px;
+    max-height: 50px;
+    /* set a maximum height */
+    overflow: auto;
+    /* enable scrolling if content exceeds height */
+    width: 33.33%;
+
+}
+
+li.month:not(li.month:empty)::before {
+    display: inline-block;
+    margin-right: 10px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+li:first-child {
+    width: 10%;
+}
+
+li:not(li:first-child) {
+    border-bottom: 1px dotted darkgray;
+}
+
+li:not(li:first-child) {
+    border-left: 1px dotted darkgray;
+}
+
+ul:last-child li:first-child {
+    border-bottom: 1px dotted darkgray;
+}
+
+li:first-child:not(li:empty),
+li:not(li:first-child) {
+    border-top: 1px dotted darkgray;
+}
